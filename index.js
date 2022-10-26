@@ -25,6 +25,7 @@ class Sprite {
     };
     this.color = color;
     this.isAttacking;
+    this.health = 100;
   }
 
   draw() {
@@ -154,7 +155,8 @@ function animate() {
     rectangularCollision({ rectangle1: player, rectangle2: enemy }) && player.isAttacking
   ) {
     player.isAttacking = false;
-    console.log("te");
+    enemy.health -=20
+    document.getElementById('enemyHealth').style.width = enemy.health + '%'
   }
 
 
@@ -162,6 +164,8 @@ function animate() {
     rectangularCollision({ rectangle1: enemy, rectangle2: player }) && enemy.isAttacking
   ) {
     enemy.isAttacking = false;
+    player.health -=20
+    document.getElementById('playerHealth').style.width = player.health + '%';
     console.log("enemy attack successful");
   }
 }
