@@ -1,33 +1,119 @@
 <head>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
   <style>
-    *{
+    * {
       box-sizing: border-box;
+      font-family: "Press Start 2P", cursive;
     }
   </style>
 </head>
 <body>
   <!-- red container div -->
-  <div style="position: relative; display: inline-block;">
-    <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 5px;">
+  <div style="position: relative; display: inline-block">
+    <div
+      style="
+        position: absolute;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 5px;
+      "
+    >
       <!-- player health -->
-      <div style="position: relative;  height:30px ; width:100%; display: flex; justify-content: flex-end;">
-        <div style="background-color: yellow; height: 30px; width: 100%;"></div>
-        <div id="playerHealth" style="position: absolute; background:blue; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          border-top: 3px solid blanchedalmond;
+          border-left: 3px solid blanchedalmond;
+          border-bottom: 3px solid blanchedalmond;
+        "
+      >
+        <div style="background-color: red; height: 30px; width: 100%"></div>
+        <div
+          id="playerHealth"
+          style="
+            position: absolute;
+            background: #a5b4fc;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+          "
+        ></div>
       </div>
-    <!-- timer -->
-    <div id="timer" style="background-color: red; width:100px; height:100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-      10
+      <!-- timer -->
+      <div
+        id="timer"
+        style="
+          background-color: #171717;
+          color: white;
+          width: 90px;
+          height: 60px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 3px solid #f8fafc;
+        "
+      >
+        10
+      </div>
+      <!-- enemy health -->
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          border-top: 3px solid blanchedalmond;
+          border-right: 3px solid blanchedalmond;
+          border-bottom: 3px solid blanchedalmond;
+        "
+      >
+        <div style="background-color: red; height: 30px"></div>
+        <div
+          id="enemyHealth"
+          style="
+            position: absolute;
+            background: #a5b4fc;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          "
+        ></div>
+      </div>
+      <div></div>
     </div>
-    <!-- enemy health -->
-    <div style="position: relative;  height:30px ; width:100%;">
-      <div style="background-color: yellow; height: 30px;"></div>
-      <div id="enemyHealth" style="position: absolute; background:blue; top: 0; right: 0; bottom: 0; left: 0;"></div>
+    <div
+      id="displayText"
+      style="
+        position: absolute;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+      "
+    >
+      Tie
     </div>
-    <div></div>
-    </div>
-    <div id="displayText" style="position: absolute; color:white;align-items: center; justify-content: center; top: 0; right: 0; bottom: 0; left: 0; display: none;">Tie</div>
     <canvas id="canvas"></canvas>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/utilitis.js"></script>
     <script src="js/classes.js"></script>
     <script src="index.js"></script>
