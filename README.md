@@ -1,5 +1,5 @@
 # Fight-Game
-## The game was Made by Canvas & HTML!
+## The game was Made with Canvas & HTML!
 ### hope you enjoy it, I worked really hard, and still have improvments to make.
 
 ### The left player controlled by : 'A' , 'S' , 'W' and for attack press space.
